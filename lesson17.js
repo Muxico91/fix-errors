@@ -11,7 +11,7 @@ var people = [
     { name: "John", age: 55 },
     { name: "Roger", age: 44 },
     { name: "Betty", age: 37 }
-    ]
+]
 
 
 var nameFilter = function(filteredName, anonymousFunction) {
@@ -19,6 +19,7 @@ var nameFilter = function(filteredName, anonymousFunction) {
     for (var i = 0; i < people.length; i++) {
         let currentName = people[i].name
         if (currentName != filteredName) {
+            anonymousFunction();
             results.push(currentName)
 
         }
@@ -27,7 +28,7 @@ var nameFilter = function(filteredName, anonymousFunction) {
     return results
 }
 
-var filteredNames = nameFilter("Betty", function(name) {
+var filteredNames = nameFilter("Betty", (name) => {
     console.log("This Ran")
 })
 console.log(filteredNames)
