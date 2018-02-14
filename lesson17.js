@@ -8,7 +8,7 @@ Expected  output in console:
         ['John', 'Roger']
 */
 var people = [
-    { name: "John", age: 55 },
+    { name: "John", age: 56 },
     { name: "Roger", age: 44 },
     { name: "Betty", age: 37 }
 ]
